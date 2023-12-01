@@ -13,9 +13,7 @@ def convert_to_digits(line: str):
 
 def get_next_digit(line: str):
     for digit in digits_map:
-        if line.startswith(digit[0]):
-            return digit[1]
-        if line.startswith(digit[1]):
+        if line.startswith(digit[0]) or line.startswith(digit[1]):
             return digit[1]
     return ""
 
